@@ -1,5 +1,3 @@
-# ui/control_panel.py
-
 import pygame
 from config import GRAY, WHITE, BLACK, GREEN, RED, BLUE, STEP_DELAY_MIN, STEP_DELAY_MAX
 
