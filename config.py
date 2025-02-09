@@ -1,5 +1,3 @@
-# config.py
-
 # Window and grid configuration
 WINDOW_WIDTH = 870
 WINDOW_HEIGHT = 950

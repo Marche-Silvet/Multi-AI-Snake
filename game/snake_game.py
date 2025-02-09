@@ -1,5 +1,3 @@
-# game/snake_game.py
-
 import os
 import string
 import random
