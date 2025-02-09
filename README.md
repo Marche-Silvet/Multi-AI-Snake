@@ -56,20 +56,6 @@ On macOS/Linux:
 4. **Modify Game Speed**: Adjust step delay in the control panel.
 5. **Add/Remove Instances**: Click on grid cells to start or remove game instances.
 
-## Saving and Loading Models
-
-To save the trained model:
-
-```bash
-python save_model.py --output model.pth
-```
-
-To load a model during inference:
-
-1. Switch to inference mode.
-2. Click the load button on a game instance.
-3. Select the saved `.pth` model file.
-
 ## Project Structure
 
 ```
