@@ -6,7 +6,7 @@ import numpy as np
 
 from config import (
     CELL_SIZE, STEP_DELAY_MIN, STEP_DELAY_MAX, TRAINING_EPISODES, MODEL_SAVE_INTERVAL,
-    BLACK, GREEN, RED, BLUE, YELLOW, WHITE
+    BLACK, GREEN, RED, BLUE, YELLOW
 )
 
 class SnakeGame:
@@ -31,7 +31,6 @@ class SnakeGame:
         self.place_food()
         self.score = 0
         self.game_over = False
-        self.resetting = True
 
     def place_food(self):
         while True:
@@ -102,7 +101,7 @@ class SnakeGame:
 
     def generate_random_string(self, length=8):
         characters = string.ascii_letters + string.digits  # Includes uppercase, lowercase, and digits
-        # print(characters)
+        print(characters)
         return ''.join(random.choices(characters, k=length))
     
     def update_direction(self, action):
@@ -159,12 +158,9 @@ class SnakeGame:
 
     def render(self, surface):
         rect = pygame.Rect(self.x, self.y, self.cell_size, self.cell_size)
-        color = BLACK if not self.game_over or not self.resetting else RED
-        color = color if not self.eating else GREEN
+        color = BLACK if not self.eating else GREEN
+        color = color if not self.game_over else RED
         pygame.draw.rect(surface, color, rect)
-
-        if self.resetting:
-            self.resetting = False
         
         for i in range(self.grid_size + 1):
             pygame.draw.line(surface, BLACK, (self.x, self.y + i * self.cell_pixel),
@@ -190,7 +186,7 @@ class SnakeGame:
         pygame.draw.rect(surface, YELLOW, food_rect)
         
         font = pygame.font.SysFont("Arial", 16)
-        score_text = font.render(f"Score: {self.score}", True, WHITE)
+        score_text = font.render(f"Score: {self.score}", True, BLACK)
         surface.blit(score_text, (self.x + 5, self.y + self.cell_size - 20))
 
     def set_step_delay(self, delay):
