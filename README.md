@@ -51,7 +51,7 @@ On macOS/Linux:
 ## Usage
 
 1. **Start/Pause**: Use the control panel to start or pause all games.
-2. **Training Mode**: The Snake agent learns through reinforcement learning.
+2. **Training Mode**: The Snake agent learns through reinforcement learning and save models every number of episode.
 3. **Inference Mode**: Load a pre-trained model to see the AI play.
 4. **Modify Game Speed**: Adjust step delay in the control panel.
 5. **Add/Remove Instances**: Click on grid cells to start or remove game instances.
