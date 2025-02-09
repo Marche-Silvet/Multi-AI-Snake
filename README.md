@@ -98,12 +98,6 @@ project/
 └── run.sh                  # Bash run script
 ```
 
-## Future Improvements
-
-- Implementing a more advanced neural network for better performance.
-- Introducing additional game mechanics for richer training.
-- Optimizing training efficiency through experience replay.
-
 ## License
 
 This project is licensed under the MIT License. Feel free to modify and distribute.
